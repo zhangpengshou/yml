@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka1
+spec:
+  type: LoadBalancer
+  externalIPs:
+    - 172.18.160.166
+  ports:
+    - name: port-9092
+      port: 9092
+      protocol: TCP
+  selector:
+    app: kafka1
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka2
+spec:
+  type: LoadBalancer
+  externalIPs:
+    - 172.18.160.176
+  ports:
+    - name: port-9092
+      port: 9092
+      protocol: TCP
+  selector:
+    app: kafka2
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka3
+spec:
+  type: LoadBalancer
+  externalIPs:
+    - 172.18.160.177
+  ports:
+    - name: port-9092
+      port: 9092
+      protocol: TCP
+  selector:
+    app: kafka3
