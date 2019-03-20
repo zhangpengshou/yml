@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: zookeeper1
-        image: wurstmeister/zookeeper
+        image: digitalwonderland/zookeeper
         ports:
         - containerPort: 2181
         - containerPort: 2888
@@ -44,7 +44,7 @@ spec:
     spec:
       containers:
       - name: zookeeper2
-        image: wurstmeister/zookeeper
+        image: digitalwonderland/zookeeper
         ports:
         - containerPort: 2181
         - containerPort: 2888
@@ -75,7 +75,7 @@ spec:
     spec:
       containers:
       - name: zookeeper3
-        image: wurstmeister/zookeeper
+        image: digitalwonderland/zookeeper
         ports:
         - containerPort: 2181
         - containerPort: 2888
